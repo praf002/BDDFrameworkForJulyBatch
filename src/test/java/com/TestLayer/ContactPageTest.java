@@ -2,6 +2,10 @@ package com.TestLayer;
 
 
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -17,6 +21,7 @@ public class ContactPageTest extends BaseClass{
 	HomePage homepage;
 	ContactPage contactpage;
 	
+
 	@BeforeClass
 	public void setUp() {
 		BaseClass.intiliazation();
@@ -41,14 +46,14 @@ public class ContactPageTest extends BaseClass{
 	@Test(priority=3)
 	public void checkEnabledStatus() {
 		boolean actualStatus=contactpage.createButtonEnabledStatus();
-		Assert.assertEquals(actualStatus, true);
+		AssertJUnit.assertEquals(actualStatus, true);
 	}
 	
 	@Test(priority=4)
 	public void clickonCreateButton() {
-		driver.navigate().refresh();
+		//driver.navigate().refresh();
 		contactpage.clickOnCreateButton();
-		driver.navigate().refresh();
+		
 	}
 
 	@Test(priority=5)
@@ -57,6 +62,8 @@ public class ContactPageTest extends BaseClass{
 		contactpage.typeLastname(prop.getProperty("lastname"));
 		contactpage.clickOnStatusButton();
 		contactpage.clickOnActiveButton();
+		//Assert.assertEquals(false, true);
+		Assert.assertEquals(12, 13);
 		Thread.sleep(10000);
 	}
 	

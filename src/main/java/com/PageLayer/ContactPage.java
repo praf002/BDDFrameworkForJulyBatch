@@ -22,7 +22,7 @@ public class ContactPage extends BaseClass {
 	@FindBy(name="status")
 	WebElement statusButton;
 	
-	@FindBy(xpath="//div[@name='status'][2]")
+	@FindBy(xpath="//div[@name='st")
 	WebElement activateButton;
 	
 	public ContactPage() {

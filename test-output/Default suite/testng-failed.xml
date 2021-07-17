@@ -7,6 +7,7 @@
         <methods>
           <include name="createContact"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.TestLayer.ContactPageTest -->
     </classes>
